@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practiva JavaScript</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="Java.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>JavaScript</h1>
+    </header>
+    <main>
+<style></style>
+    <h2>Reto:Programación Orientada a Objetos</h2><br />
+        <p><b>1.</b> Crear una clase llamada Vehículo que incluya un constructor y un método para mostrar detalles generales del vehículo.<br /><br />
+           <b>2.</b> Crea dos subclases de Vehículos cualesquiera que hereden de Vehículo e incluyan un constructor con atributos específicos, 
+           como la capacidad de pasajeros, y un método para mostrar detalles personalizados.<br /><br />
+           <b>3.</b> Crea una instancia de cada Vehículo y muestra sus detalles en la consola.<br /><br />
+           <img src="./UOT PUT.jpg" alt="JavaScript" width="600" height="auto"><br />
+    </p>
+    <h2>Ejecución</h2> <br />
+    <p>
+    <b>1.</b>                          Crea una clase Vehículo que incluya un constructor que 
+             establezca el número de ruedas y un método para mostrar detalles generales del vehículo.  <br /><br />
+<small><pre>
+    class Vehiculo {
+        constructor(ruedas){
+        this.ruedas = ruedas;                            //numero de ruedas del vehiculo
+        }
+        mostrarDetallesDeVehiculo(){                     // método
+            return `Este Vehiculo tiene ${this.ruedas} ruedas.`;      
+        }
+    }
+</pre>
+  <br />
+    <hr /><br />
+    <p><b>2.</b> Crea dos subclases de Vehículos cualesquiera que hereden de Vehículo e incluyan un constructor 
+    con atributos específicos, como la capacidad de pasajeros, y un método para mostrar detalles personalizados.</p> <br />
+    </small><pre>
+<small>
+    class Coche extends Vehiculo {          // extends es para heredar de la clase padre
+        constructor(ruedas,pasajeros){
+        super(ruedas);                      // Llamamos al constructor de la clase padre
+        this.pasajeros = pasajeros;         // Atributo adicional: capacidad de pasajeros
+        }
+        mostrarDetallesDeVehiculo(){    
+            return super.mostrarDetallesDeVehiculo() + `Puede transportar ${this.pasajeros} pasajeros.`;
+        }
+    }
+    class Bicicleta extends Vehiculo {      // extends es para heredar de la clase padre
+        constructor(ruedas, tipo){          // Llamamos al constructor de la clase padre
+        super(ruedas);                      // Atributo adicional: tipo de bicicleta
+        this.tipo = tipo;                   // Sobrescribimos el método detalles de la 
+        }
+        mostrarDetallesDeVehiculo(){        // metodo que muestra los detalles del vehiculo
+            return super. mostrarDetallesDeVehiculo()+` Es una bicicleta de tipo ${this.tipo}.`;
+        }
+    }
+</small></pre>
+<br />
+<hr /><br>
+3. Crea una instancia de cada Vehículo y muestra sus detalles en la consola.<br />
+<pre>
+<br />
+    const coche = new Coche(4,5);
+    const bicicleta = new Bicicleta(2, 'Montaña');
+    console.log(coche.mostrarDetallesDeVehiculo());
+    console.log(bicicleta.mostrarDetallesDeVehiculo());  
+</pre>
+</p>
+<br />
+<h2>Codigo</h2>  
+<img src="./imagen.jpg" alt="JavaScript" width="1200" height="auto">
+</main>
+<footer>
+    <p class="footer">&copy; <a href="https://github.com/viictormesges-design">Victor</a> Duran 2026 &vert; Todos los derechos reservados.<br >
+    Practica JavaScript &vert; Practica HTML, CSS y JavaScript.</p>
+</footer>
+</body>
+</html>
