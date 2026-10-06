@@ -40,21 +40,21 @@
     con atributos específicos, como la capacidad de pasajeros, y un método para mostrar detalles personalizados.</p> <br />
     </small><pre>
 <small>
-    class Coche extends Vehiculo {          // extends es para heredar de la clase padre
+    class Coche extends Vehiculo {                 // extends es para heredar de la clase padre
         constructor(ruedas,pasajeros){
-        super(ruedas);                      // Llamamos al constructor de la clase padre
-        this.pasajeros = pasajeros;         // Atributo adicional: capacidad de pasajeros
+        super(ruedas);                             // Llamamos al constructor de la clase padre
+        this.pasajeros = pasajeros;                // Atributo adicional: capacidad de pasajeros
         }
         mostrarDetallesDeVehiculo(){    
             return super.mostrarDetallesDeVehiculo() + `Puede transportar ${this.pasajeros} pasajeros.`;
         }
     }
-    class Bicicleta extends Vehiculo {      // extends es para heredar de la clase padre
-        constructor(ruedas, tipo){          // Llamamos al constructor de la clase padre
-        super(ruedas);                      // Atributo adicional: tipo de bicicleta
-        this.tipo = tipo;                   // Sobrescribimos el método detalles de la 
+    class Bicicleta extends Vehiculo {             // extends es para heredar de la clase padre
+        constructor(ruedas, tipo){                 // Llamamos al constructor de la clase padre
+        super(ruedas);                             // Atributo adicional: tipo de bicicleta
+        this.tipo = tipo;                          // Sobrescribimos el método detalles de la 
         }
-        mostrarDetallesDeVehiculo(){        // metodo que muestra los detalles del vehiculo
+        mostrarDetallesDeVehiculo(){               // metodo que muestra los detalles del vehiculo
             return super. mostrarDetallesDeVehiculo()+` Es una bicicleta de tipo ${this.tipo}.`;
         }
     }
